@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RoomTemperature</string>
+
+    <string name="room">ROOM</string>
+    <string name="bed_room">BEDROOM</string>
+    <string name="power_off">POWER OFF</string>
+    <string name="temperature">TEMPERATURE</string>
+    <string name="fan_speed">FAN SPEED</string>
+    <string name="med">Med</string>
+    <string name="min">MIN</string>
+    <string name="max">MAX</string>
+    <string name="low">LOW</string>
+    <string name="high">HIGH</string>
+    <string name="eco">ECO</string>
+</resources>

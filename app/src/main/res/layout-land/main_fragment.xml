@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBackground"
+        tools:context=".main.MainFragment">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+            <LinearLayout
+                    android:id="@+id/linearLayoutTabRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/tabTextSize"
+                        android:text="@string/room"/>
+
+                <FrameLayout
+                        android:id="@+id/frameLayoutTabRoomIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorSeparator"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/linearLayoutTabBedRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/tabTextSize"
+                        android:text="@string/bed_room"/>
+
+                <FrameLayout
+                        android:id="@+id/frameLayoutTabBedRoomIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorSeparator"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSeparator"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1" />
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                <app.com.roomtemperature.ui.views.circuleprogressview.CircleProgressView
+                        android:id="@+id/circleRoomTemperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:cpv_autoTextSize="true"
+                        app:cpv_barWidth="10dp"
+                        app:cpv_maxValue="100"
+                        app:cpv_outerContourSize="0dp"
+                        app:cpv_rimWidth="0dp"
+                        app:cpv_innerContourColor="#2fdc5260"
+                        app:cpv_innerContourSize="5dp"
+                        app:cpv_seekMode="false"
+                        app:cpv_showUnit="true"
+                        app:cpv_textScale="0.3"
+                        app:cpv_unit=""
+                        app:cpv_unitPosition="bottom"
+                        app:cpv_unitScale="1"
+                        app:cpv_value="75"
+                        app:cpv_fillColor="@color/colorForegroundWhite"
+                        app:cpv_startAngle="135"
+                        app:cpv_textColor="@android:color/transparent"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="70dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/smallTextSize"
+                        android:text="@string/min"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/smallTextSize"
+                        android:text="@string/max"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextColorMain"
+                            android:textSize="@dimen/infoTextSize"
+                            android:text="@string/temperature"/>
+
+                    <TextView
+                            android:id="@+id/textViewTemperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextColorMain"
+                            android:textSize="@dimen/boldTextSize"
+                            android:textStyle="bold"
+                            android:text="29°C"/>
+
+                    <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_temperature" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_eco_button">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/infoTextSize"
+                            android:text="@string/eco"
+                            android:layout_marginLeft="10dp"/>
+
+                    <android.support.v7.widget.SwitchCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:checked="true"/>
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"/>
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.2">
+
+                <app.com.roomtemperature.ui.views.circuleprogressview.CircleProgressView
+                        android:id="@+id/circleFanSpeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:cpv_autoTextSize="true"
+                        app:cpv_barWidth="10dp"
+                        app:cpv_barColor="@color/colorFanSpeedBarColor"
+                        app:cpv_maxValue="4"
+                        app:cpv_seekMode="true"
+                        app:cpv_showUnit="true"
+                        app:cpv_textColor="@android:color/transparent"
+                        app:cpv_unit=""
+                        app:cpv_unitPosition="bottom"
+                        app:cpv_unitScale="1"
+                        app:cpv_value="2"
+                        app:cpv_blockCount="4"
+                        app:cpv_blockScale="0.98"
+                        app:cpv_outerContourSize="0dp"
+                        app:cpv_innerContourSize="0dp"
+                        app:cpv_rimColor="#6d6a79"
+                        app:cpv_rimWidth="5dp"
+                        app:cpv_fillColor="@color/colorForegroundWhite"
+                        app:cpv_drawingAngle="270"
+                        app:cpv_startAngle="135"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="80dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/smallTextSize"
+                        android:text="@string/low"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="80dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/smallTextSize"
+                        android:text="@string/high"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextColorMain"
+                            android:textSize="@dimen/infoTextSize"
+                            android:text="@string/fan_speed"/>
+
+                    <TextView
+                            android:id="@+id/textViewFanSpeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextColorMain"
+                            android:textSize="@dimen/boldTextSize"
+                            android:textStyle="bold"
+                            android:text="@string/med"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp"
+                    android:text="POWER OFF"/>
+
+            <FrameLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_power_button">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_power"/>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

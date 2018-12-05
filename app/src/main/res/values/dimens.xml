@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="tabTextSize">10dp</dimen>
+
+    <dimen name="boldTextSize">24sp</dimen>
+    <dimen name="infoTextSize">12sp</dimen>
+
+    <dimen name="smallTextSize">9sp</dimen>
+</resources>

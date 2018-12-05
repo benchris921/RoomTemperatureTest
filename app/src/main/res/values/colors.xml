@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#008577</color>
+
+    <color name="colorBackground">#878685</color>
+    <color name="colorForegroundWhite">#f5f5f5</color>
+
+    <color name="colorSeparator">#DFDFDF</color>
+    <color name="colorDarkGray">#646360</color>
+    <color name="colorLightGray">#979694</color>
+
+    <color name="colorTemperatureGradientEndColor">#e45664</color>
+    <color name="colorTemperatureGradientStartColor">#9bb84b</color>
+    <color name="colorTextColorMain">#7b7b7b</color>
+
+    <color name="colorFanSpeedBarColor">#8f8ec5</color>
+
+
+</resources>
